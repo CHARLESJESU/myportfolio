@@ -1,0 +1,584 @@
+.resume-container {
+  height: 120vh;
+  width: 100vw; /* Full height of the viewport */
+  background-image: url('src/assets/background1.jpg'); /* Replace with your image path */
+  background-size: cover; /* Cover the entire container */
+  background-position: center top; /* Center the image */
+  display: fixed;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Text color */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Prevent unwanted spacing */
+}
+
+.circle {
+  position: absolute;
+  top: 10px; /* Adjust the position of the circle */
+  left: 100px; /* Adjust the position of the circle */
+  width: 250px; /* Diameter of the circle */
+  height: 280px; /* Diameter of the circle */
+  border-radius: 50%; /* Makes it a perfect circle */
+  border: 5px solid #D58218; /* Border with a subtle glow effect */
+  background-image: url('src/assets/myphoto.png'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image fills the circle */
+  background-position: top; /* Centers the image within the circle */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  box-shadow: 
+    0px 15px 30px rgba(0, 0, 0, 0.4), /* Outer shadow for depth */
+    inset 0px -5px 10px rgba(0, 0, 0, 0.5), /* Inner shadow for bottom depth */
+    inset 0px 5px 15px rgba(255, 255, 255, 0.3); /* Inner glow for top highlight */
+  position: relative; /* To allow pseudo-elements for additional effects */
+  overflow: hidden; /* To clip the pseudo-elements */
+}.circle-text1 {
+  position: absolute;
+  top: 295px; /* Adjust the position of the text to be under the circle */
+  left: 14.9%;
+  transform: translateX(-50%); /* Center the text horizontally */
+  text-align: center; /* Center the text */
+}
+
+.circle-text1 h2,
+.circle-text1 h3 {
+  margin-top: 10px;
+  color: white; /* White color for the text */
+  font-family: 'Arial', sans-serif; /* Set a clean font */
+}
+
+.circle-text1 h2 {
+
+  font-size: 24px; /* Adjust the size of the name */
+  font-weight: bold;
+}
+
+.circle-text1 h3 {
+  margin-top: 2px;
+  font-size: 18px; /* Adjust the size of the designation */
+  font-weight: normal;
+}
+
+.container1 {
+  position: absolute;
+  top: 10px;
+  left: 565px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 50px;
+  /* Container height */
+   /* Background color for the container */
+  border-radius: 45px; /* Rounded corners */
+   /* Push it down below the circle */
+   /* Optional padding for the container's content */
+ /* Optional shadow for extra depth */
+}
+
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle-button {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-size: 62px;
+  color: #222E3A;
+}
+
+.circle-button.active {
+  background-color: #EC9F23;
+  color: #D9D9D9;
+   /* Larger icon size */
+  transform: scale(1.2); /* No additional scaling, just size difference */
+   /* Optional: Highlight active button */
+}
+.button-label {
+  margin-top: 20px;
+  font-size: 14px;
+  font-style: bold;
+  font-family: "Poppins", sans-serif;
+  color: #ffff;
+  text-align: center;
+}
+.button-label.active-label {
+  font-size: 18px; /* Larger label font size for active button */
+  color: white; /* Highlight active label color */
+  font-weight: bold;
+}
+.container {
+  position: relative;
+  top: 90px;
+  left: 65px;
+  width: 300px;  /* Match your content container width */
+  height: 400px; /* Match your content container height */
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  perspective: 1000px;
+  background-color: #D9D9D9;
+  border-radius: 45px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container.flipped {
+  transform: rotateY(180deg);
+}
+
+.container-front,
+.container-back {
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 45px;
+  padding: 20px;
+}
+
+.container-back p{
+  text-align: justify;
+  font-size: 1.2em;  
+  color: #222E3A;
+  margin-top: 10px;
+  text-indent: 40px;
+  line-height: 30px;
+}
+.container-front {
+  background-color: #D9D9D9;
+}
+
+.container-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  background-color: #D9D9D9;
+  color: #222E3A;
+}
+/* Adding a glossy highlight effect */
+@keyframes floatIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.content-container {
+  position: absolute;
+  top: 280px;
+  left: 570px;
+  width: 580px; /* Container width */
+  height: 300px; /* Container height */
+  background-color: #D9D9D9; /* Background color for the container */
+  border-radius: 45px; /* Rounded corners */
+   /* Push it down below the circle */
+  padding: 20px; /* Optional padding for the container's content */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); 
+  animation: floatIn 1s ease-out, float 3s infinite ease-in-out;
+  animation-fill-mode: forwards;/* Optional shadow for extra depth */
+}
+/*education*/@keyframes slideScaleFade {
+  0% {
+    transform: translateY(50px) scale(0.8); /* Start below and smaller */
+    opacity: 0; /* Fully transparent */
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05); /* Slight bounce above final position */
+    opacity: 0.7; /* Partially visible */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* Final position and size */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.content-container1 {
+  position: absolute;
+  top: 280px;
+  left: 520px;
+  width: 720px; /* Container width */
+  height: 500px; /* Container height */
+  background-color: #D9D9D9; /* Background color for the container */
+  border-radius: 45px; /* Rounded corners */
+  padding: 20px; /* Optional padding for the container's content */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Optional shadow for extra depth */
+
+  /* Animation properties */
+  animation: slideScaleFade 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth bounce effect */
+  animation-fill-mode: forwards; /* Ensures it stays in the final position after animation */
+  opacity: 0; /* Ensure the container starts hidden if JavaScript is involved */
+}
+
+.contact-heading {
+  text-align: center;
+  font-size: 1.5em;
+  color: #222E3A;
+  margin-bottom: 20px;
+}/*about me*/
+.contact-heading1 {
+  text-align: left;
+  font-size: 1.5em;
+  font-style: italic;
+  color: #222E3A;
+  margin-top: 20px;
+
+}/*about me*/
+.contact-heading2 {
+  text-align: justify;
+  font-size: 1.5em;  
+  color: #222E3A;
+  margin-top: 30px;
+  text-indent: 40px;
+  line-height: 40px;
+  
+}/*education*/
+.education-item {
+  margin-top: 40px;
+  display: flex;
+  align-items: center; /* Align image and text vertically */
+  gap: 50px; /* Add spacing between the image and text */
+}
+
+.image-style img {
+  width: 150px; /* Adjust size of the logo */
+  height: 150px;
+  border-radius: 8px; /* Optional: Add rounded corners to the image */
+}
+
+.contact-heading3 {
+
+  font-size: 1.3em;
+  line-height: 1.5;
+  color: #333;
+}
+/* skills*/
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+ /* Adjust if necessary */
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif; /* Add this font-family */
+  font-size: 14px; /* Match the font size */
+}
+
+
+.skills-section {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.skills-section h3 {
+  color: #222E3A;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.skills-section ul {
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.skills-section li {
+  color: #222E3A;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.skills-section1 li {
+  color: #222E3A;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.skills-section1 h3 {
+  color: #222E3A;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.skills-section1 ul {
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.skills-section1 li img {
+  width: 43px; /* Adjust icon size */
+  height: 38px;
+  margin-right: 10px;
+}
+.skills-section li img {
+  width: 20px; /* Adjust icon size */
+  height: 20px;
+  margin-right: 15px;
+}
+@keyframes pulseIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.content-container2 {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  position: absolute;
+  top: 280px;
+  left: 570px;
+  width: 580px; /* Container width */
+  height: 400px; /* Container height */
+  background-color: #D9D9D9; /* Background color for the container */
+  border-radius: 45px; /* Rounded corners */
+   /* Push it down below the circle */
+  /* Optional padding for the container's content */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  animation: pulseIn 1.2s ease-in-out;
+  animation-fill-mode: forwards; 
+  
+}
+@keyframes flipIn {
+  0% {
+    transform: rotateY(-180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+.content-container3 {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  top: 280px;
+  left: 520px;
+  width: 720px; /* Container width */
+  height: 530px; /* Container height */
+  background-color: #D9D9D9; /* Background color for the container */
+  border-radius: 45px; /* Rounded corners */
+   /* Push it down below the circle */
+  padding: 20px; /* Optional padding for the container's content */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); 
+  animation: flipIn 1.5s ease-in-out;
+  animation-fill-mode: forwards;/* Optional shadow for extra depth */
+}
+
+
+h2 {
+ 
+  color: #222E3A;
+  margin-bottom: 5px;
+}
+
+.projects, .certifications {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+.project-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+}
+.project-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.project-text p {
+  margin: 0;
+  font-weight: bold;
+  color: #222E3A;
+}
+
+.project-text a {
+  color: #3C6DB9;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+
+.certifications ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 25px;
+}
+.certifications h2{
+
+  margin-bottom: 15px;
+}
+.certifications li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-style: bold;
+  color: #222E3A;
+}
+
+.cert-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.certifications span {
+  font-size: 0.9em;
+}
+@keyframes rotateIn {
+  0% {
+    transform: rotate(-180deg) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+.content-container4 {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  top: 280px;
+  left: 520px;
+  width: 720px; /* Container width */
+  height: 400px; /* Container height */
+  background-color: #D9D9D9; /* Background color for the container */
+  border-radius: 45px; /* Rounded corners */
+   /* Push it down below the circle */
+  padding: 20px; /* Optional padding for the container's content */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); 
+  animation: rotateIn 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  animation-fill-mode: forwards;/* Optional shadow for extra depth */
+}
+.content-container4 p{
+  margin-bottom: 15px;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #222E3A;
+  padding-left: 40px;
+}
+
+.content-container4 h2{
+ 
+  font-size: 1em;
+
+
+  color: #222E3A;
+  margin-top: 35px;
+  padding-left: 10px;
+}
+.contact-row {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contact-icon {
+  color: #222E3A;
+  font-size: 1.5em;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 17px;
+}
+
+.contact-text {
+  font-size: 1em;
+  font-style: bold;
+  color: #222E3A;
+  margin-bottom: -10px;
+}
+
+.contact-link {
+  font-size: 1em;
+  color: #222E3A;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .resume-container {
+    height: auto; /* Adjust height for smaller screens */
+    width: 100%; /* Full width */
+    display: flex; /* Change display to flex for better alignment */
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .circle {
+    width: 200px; /* Smaller circle size */
+    height: 200px; /* Smaller circle size */
+    top: 5%; /* Adjust position */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+  }
+
+  .container1 {
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    margin-top: 20px; /* Adjust margin */
+  }
+
+  .content-container, .content-container1, .content-container2, .content-container3, .content-container4 {
+    width: 90%; /* Full width on smaller screens */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+  }
+
+  .button-wrapper {
+    flex-direction: row; /* Change to row for smaller screens */
+    gap: 20px; /* Adjust gap */
+  }
+
+  .circle-text1 {
+    top: 220px; /* Adjust position */
+  }
+}
