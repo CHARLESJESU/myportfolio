@@ -1,7 +1,7 @@
 .resume-container {
   height: 120vh;
   width: 100vw; /* Full height of the viewport */
-  background-image: url('src/assets/background1.jpg'); /* Replace with your image path */
+  background-image: url('/src/assets/background.jpg'); /* Replace with your image path */
   background-size: cover; /* Cover the entire container */
   background-position: center top; /* Center the image */
   display: fixed;
@@ -25,7 +25,7 @@
   height: 280px; /* Diameter of the circle */
   border-radius: 50%; /* Makes it a perfect circle */
   border: 5px solid #D58218; /* Border with a subtle glow effect */
-  background-image: url('src/assets/myphoto.png'); /* Replace with your image path */
+  background-image: url('/src/assets/myphoto.png'); /* Replace with your image path */
   background-size: cover; /* Ensures the image fills the circle */
   background-position: top; /* Centers the image within the circle */
   background-repeat: no-repeat; /* Prevents the image from repeating */

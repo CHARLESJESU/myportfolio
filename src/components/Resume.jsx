@@ -2,6 +2,39 @@ import React, { useState } from 'react';
 import '../styles/Resume.css'; // For styling
 import { Phone, Email, LinkedIn, GitHub, LocationOn } from '@mui/icons-material';
 import { MdAccountCircle, MdSchool, MdPsychology, MdLaptop, MdArticle } from "react-icons/md";
+import faaborImage from '../assets/faabor.png';
+import callBuddiesImage from '../assets/callbuddies.png';
+import aiTrafficImage from '../assets/sih.png';
+import myphoto from '../assets/myphoto.png';
+import studentRegImage from '../assets/studentcollege.png';
+import ritLogo from '../assets/ritlogo.png';
+
+import backgroundImage from '../assets/background.jpg';
+
+
+import rinex from '../assets/rinex.png';
+import reactjs from '../assets/reactjs.png';
+import pycharm from '../assets/pycharm.png';
+
+import intellij from '../assets/intellij.png';
+import html from '../assets/html.png';
+import flutter from '../assets/flutter.png';
+import firebase from '../assets/firebase.png';
+
+import dart from '../assets/dart.png';
+import css from '../assets/css.png';
+
+import vs from '../assets/vs.png';
+import java from '../assets/java.png';
+import sjchssLogo from '../assets/sjchsslogo.png';
+import python from '../assets/python.png';
+
+import coursera from '../assets/coursera.png';
+import nptel from '../assets/nptel.png';
+import aws from '../assets/aws.png';
+import eclipse from '../assets/eclipse.png';
+import sql from '../assets/sql.png';
+
 
 const Resume = () => {
   const [activeButton, setActiveButton] = useState(0);
@@ -60,7 +93,7 @@ const Resume = () => {
             <div className="content-container1">
               <div className="education-item">
                 <div className="image-style">
-                  <img src="src/assets/ritlogo.png" alt="RIT Logo" />
+                  <img src={ritLogo} alt="RIT Logo" />
                 </div>
                 <div className="contact-heading3">
                   <h3>
@@ -72,7 +105,7 @@ const Resume = () => {
               </div>
               <div className="education-item">
                 <div className="image-style">
-                  <img src="src/assets/sjchsslogo.png" alt="RIT Logo" />
+                  <img src={sjchssLogo} alt="SJCHSS Logo" />
                 </div>
                 <div className="contact-heading3">
                   <h3>
@@ -94,32 +127,32 @@ Total Mark: 95.5%
     <h3>Languages</h3>
     <ul>
       <li>
-        <img src="src/assets/python.png" alt="Python" /> Python
+        <img src={python} alt="Python" /> Python
       </li>
       <li>
-        <img src="src/assets/java.png" alt="Java" /> Java
+        <img src={java} alt="Java" /> Java
       </li>
       <li>
-        <img src="src/assets/dart.png" alt="Dart" /> Dart
+        <img src={dart} alt="Dart" /> Dart
       </li>
       <li>
-        <img src="src/assets/sql.png" alt="SQL" /> SQL
+        <img src={sql} alt="SQL" /> SQL
       </li>
       <li>
-        <img src="src/assets/html.png" alt="HTML" /> HTML
+        <img src={html} alt="HTML" /> HTML
       </li>
       <li>
-        <img src="src/assets/css.png" alt="CSS" /> CSS
+        <img src={css} alt="CSS" /> CSS
       </li>
     </ul>
 
     <h3>Frameworks</h3>
     <ul>
       <li>
-        <img src="src/assets/reactjs.png" alt="React.js (Vite)" /> React.js (Vite)
+        <img src={reactjs} alt="React.js (Vite)" /> React.js (Vite)
       </li>
       <li>
-        <img src="src/assets/flutter.png" alt="Flutter" /> Flutter
+        <img src={flutter} alt="Flutter" /> Flutter
       </li>
     </ul>
   </div>
@@ -128,19 +161,19 @@ Total Mark: 95.5%
     <h3>Developer Tools</h3>
     <ul>
       <li>
-        <img src="src/assets/firebase.png" alt="Firebase" /> Firebase
+        <img src={firebase} alt="Firebase" /> Firebase
       </li>
       <li>
-        <img src="src/assets/vs.png" alt="Visual Studio Code" /> Visual Studio Code
+        <img src={vs} alt="Visual Studio Code" /> Visual Studio Code
       </li>
       <li>
-        <img src="src/assets/pycharm.png" alt="PyCharm" /> PyCharm
+        <img src={pycharm} alt="PyCharm" /> PyCharm
       </li>
       <li>
-        <img src="src/assets/intellij.png" alt="IntelliJ" /> IntelliJ
+        <img src={intellij} alt="IntelliJ" /> IntelliJ
       </li>
       <li>
-        <img src="src/assets/eclipse.png" alt="Eclipse" /> Eclipse
+        <img src={eclipse} alt="Eclipse" /> Eclipse
       </li>
     </ul>
   </div>
@@ -155,7 +188,7 @@ Total Mark: 95.5%
               <h2>Projects</h2>
               <div className="grid">
                 <div className="project-item">
-                  <img src="src/assets/faabor.png" alt="Faabor" className="project-icon" />
+                  <img src={faaborImage} alt="Faabor" className="project-icon" />
                   <div className="project-text">
                     <p>Faabor</p>
                     <a href="#" onClick={(e) => {
@@ -166,7 +199,7 @@ Total Mark: 95.5%
                   </div>
                 </div>
                 <div className="project-item">
-                  <img src="src/assets/callbuddies.png" alt="Call Buddies" className="project-icon" />
+                  <img src={callBuddiesImage} alt="Call Buddies" className="project-icon" />
                   <div className="project-text">
                     <p>Call Buddies</p>
                     <a href="#" onClick={(e) => {
@@ -177,7 +210,7 @@ Total Mark: 95.5%
                   </div>
                 </div>
                 <div className="project-item">
-                  <img src="src/assets/sih.png" alt="AI Traffic Control" className="project-icon" />
+                  <img src={aiTrafficImage} alt="AI Traffic Control" className="project-icon" />
                   <div className="project-text">
                     <p>AI Traffic Control Management System</p>
                     <a href="#" onClick={(e) => {
@@ -188,7 +221,7 @@ Total Mark: 95.5%
                   </div>
                 </div>
                 <div className="project-item">
-                  <img src="src/assets/studentcollege.png" alt="Student Registration" className="project-icon" />
+                  <img src={studentRegImage} alt="Student Registration" className="project-icon" />
                   <div className="project-text">
                     <p>Student Registration Form</p>
                     <a href="#" onClick={(e) => {
@@ -204,19 +237,19 @@ Total Mark: 95.5%
               <h2>Certifications</h2>
               <ul>
                 <li>
-                  <img src="src/assets/nptel.png" alt="NPTEL" className="cert-icon" />
+                  <img src={nptel} alt="NPTEL" className="cert-icon" />
                   <span>‘Programming In Java’ by NPTEL.</span>
                 </li>
                 <li>
-                  <img src="src/assets/aws.png" alt="AWS" className="cert-icon" />
+                  <img src={aws} alt="AWS" className="cert-icon" />
                   <span>‘AWS Cloud Foundation’ by AWS.</span>
                 </li>
                 <li>
-                  <img src="src/assets/rinex.png" alt="Rinex" className="cert-icon" />
+                  <img src={rinex} alt="Rinex" className="cert-icon" />
                   <span>‘Data Science Course’ by Rinex.</span>
                 </li>
                 <li>
-                  <img src="src/assets/coursera.png" alt="Coursera" className="cert-icon" />
+                    <img src={coursera} alt="Coursera" className="cert-icon" />
                   <span>‘Introduction To CATIA V5’ by Coursera.</span>
                 </li>
               </ul>
