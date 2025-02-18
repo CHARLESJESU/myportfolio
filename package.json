@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://CHARLESJESU.github.io/my-portfolio/",
+  "homepage": "https://CHARLESJESU.github.io/mygitportfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "main -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
