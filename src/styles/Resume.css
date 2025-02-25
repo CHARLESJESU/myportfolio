@@ -1,7 +1,7 @@
 .resume-container {
   height: 120vh;
-  width: 100vw; /* Full height of the viewport */
-  background-image: url('/src/assets/background.jpg'); /* Replace with your image path */
+  width: 100%; /* Full height of the viewport */
+  background-image: url('/src/assets/background1.jpg'); /* Replace with your image path */
   background-size: cover; /* Cover the entire container */
   background-position: center top; /* Center the image */
   display: fixed;
