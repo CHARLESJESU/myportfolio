@@ -46,7 +46,7 @@ const Resume = () => {
     { name: "Education", icon: <MdSchool /> },
     { name: "Skills", icon: <MdPsychology /> },
     { name: "Projects", icon: <MdLaptop /> },
-    { name: "IPW", icon: <MdArticle /> },
+    { name: "IPR", icon: <MdArticle /> },
   ];
 
   const getProjectContent = () => {
@@ -261,7 +261,7 @@ Total Mark: 95.5%
           <div className="content-container4">
       <div className="section1">
       <section className="section">
-        <h2>COPY RIGHTS</h2>
+        <h2>COPYRIGHTS</h2>
         <p>
           <strong>FAABOR</strong> (Feed App Achieves Between Orphanages and Restaurants) – Diary No. 24901/2024-CO/SW
         </p>
