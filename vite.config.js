@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base : "/myportfolio"
+  base: "/myportfolio/",
+  build: {
+    outDir: "docs"  // Change output directory to docs
+  }
 })
