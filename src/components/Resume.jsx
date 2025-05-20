@@ -265,6 +265,9 @@ Total Mark: 95.5%
         <p>
           <strong>FAABOR</strong> (Feed App Achieves Between Orphanages and Restaurants) – Diary No. 24901/2024-CO/SW
         </p>
+        <p>
+          <strong>KIDDOCALL</strong> – Diary No. 8227/2025-CO/SW
+        </p>
       </section>
 
       <section className="section">
